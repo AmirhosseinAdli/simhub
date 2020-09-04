@@ -8,8 +8,9 @@ use Kernel\Migration;
 
 class CreateUsersTable extends Migration
 {
-    public function up(){
-        $this->create_table('users',[
+    public function up()
+    {
+        $this->create_table('users', [
             $this->autoincremental('id', 7),
             $this->string('username', 150),
             $this->string('password', 255),
@@ -17,7 +18,8 @@ class CreateUsersTable extends Migration
         ]);
     }
 
-    public function down(){
+    public function down()
+    {
         $this->drop_table('users');
     }
 }
